@@ -85,16 +85,14 @@ const playerLose = (player) => {
     const $loseTitle = createElement('div', 'loseTitle')
     if (player1.hp === player.hp && player2.hp === player.hp) {
         $loseTitle.innerText = 'Draw'
-        return $loseTitle
     }
     else if (player1.hp !== player.hp && player2.hp == player.hp) {
         $loseTitle.innerText = player1.name + ' win'
-        return $loseTitle
     }
     else if (player2.hp !== player.hp && player1.hp == player.hp) {
         $loseTitle.innerText = player2.name + ' win'
-        return $loseTitle
     }
+    return $loseTitle
 }
 
 $randomButton.addEventListener('click', () => {
